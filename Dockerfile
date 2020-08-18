@@ -223,7 +223,8 @@ RUN \
   && ln -sf /dev/stderr /var/log/nginx/error.log
 
 # Recommended nginx configuration. Please copy the config you wish to use.
-# COPY nginx.conf /etc/nginx/
+COPY nginx.conf /etc/nginx/
+COPY tunnelssl.conf /etc/nginx/conf.d/
 # COPY h3.nginx.conf /etc/nginx/conf.d/
 
 STOPSIGNAL SIGTERM
